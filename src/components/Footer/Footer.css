@@ -1,0 +1,358 @@
+/* =========================================
+   TRAVELO FOOTER
+========================================= */
+
+.travel-footer {
+  width: 100%;
+  margin-top: 0;
+  background-color: #f7f7f7;
+  color: #222;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+/* =========================================
+   INSPIRATION SECTION
+========================================= */
+
+.footer-inspiration {
+  padding: 32px 48px 45px;
+}
+
+.footer-inspiration h2 {
+  margin: 0 0 22px;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* =========================================
+   CATEGORY TABS
+========================================= */
+
+.footer-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+
+  border-bottom: 1px solid #dddddd;
+
+  margin-bottom: 30px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.footer-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.footer-tabs button {
+  position: relative;
+
+  border: none;
+  background: transparent;
+
+  padding: 0 0 14px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  color: #666;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.footer-tabs button:hover {
+  color: #222;
+}
+
+.footer-tabs button.active {
+  color: #222;
+
+  font-weight: 600;
+}
+
+.footer-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -1px;
+
+  height: 2px;
+
+  background-color: #222;
+}
+
+
+/* =========================================
+   DESTINATION GRID
+========================================= */
+
+.destination-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  column-gap: 35px;
+  row-gap: 0;
+}
+
+.destination-item {
+  min-width: 0;
+}
+
+.destination-grid h4 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.destination-grid p {
+  margin: 3px 0 27px;
+
+  font-size: 13px;
+
+  color: #717171;
+}
+
+
+/* Show More */
+
+.show-more {
+  cursor: pointer;
+}
+
+.show-more h4 {
+  transition: text-decoration 0.2s ease;
+}
+
+.show-more:hover h4 {
+  text-decoration: underline;
+}
+
+.show-more-arrow {
+  margin-left: 4px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 80px;
+
+  padding: 48px;
+
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.footer-column h3 {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.footer-column a {
+  width: fit-content;
+
+  color: #333;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #000;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   BOTTOM FOOTER
+========================================= */
+
+.footer-bottom {
+  min-height: 72px;
+
+  padding: 0 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-size: 13px;
+}
+
+
+/* Legal */
+
+.footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  color: #222;
+
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   LANGUAGE / CURRENCY / SOCIAL
+========================================= */
+
+.footer-options {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.footer-language {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.footer-options a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #222;
+
+  text-decoration: none;
+}
+
+.footer-options .material-icons-outlined {
+  font-size: 19px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 5px;
+  }
+
+  .footer-main {
+    gap: 45px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .footer-inspiration {
+    padding: 28px 22px 40px;
+  }
+
+  .footer-inspiration h2 {
+    font-size: 19px;
+  }
+
+  .footer-tabs {
+    gap: 24px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 25px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 40px 22px;
+  }
+
+  .footer-bottom {
+    padding: 25px 22px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .footer-options {
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+}

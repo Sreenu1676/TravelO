@@ -1,0 +1,376 @@
+/* =========================================
+   HOTEL CARD
+========================================= */
+
+.hotelcard-container {
+  position: relative;
+  width: 100%;
+  height: 345px;
+
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.hotelcard-container .img {
+  display: block;
+
+  width: 100%;
+  height: 230px;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  background: #eee;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.hotelcard-details {
+  width: 100%;
+  height: 115px;
+
+  padding: 12px 12px 10px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+}
+
+
+/* =========================================
+   LOCATION + RATING
+========================================= */
+
+.hotelcard-details > .d-flex {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+
+/* LOCATION */
+
+.location {
+  min-width: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #222;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.rating {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #555;
+}
+
+.rating .material-icons-outlined {
+  font-size: 17px;
+  line-height: 17px;
+
+  color: #222;
+}
+
+
+/* =========================================
+   HOTEL NAME
+========================================= */
+
+.hotel-name {
+  width: 100%;
+
+  margin: 5px 0 9px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #777;
+
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.price-details {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #555;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.hotelcard-container .btn-wishlist {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  outline: none;
+
+  background: transparent !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 50;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================
+   HEART
+   DEFAULT = GRAY OUTLINE
+========================================= */
+
+.hotelcard-container .btn-wishlist .favorite {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 25px;
+  line-height: 1;
+
+  color: #666;
+
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================
+   WISHLISTED = RED
+========================================= */
+
+.hotelcard-container .btn-wishlist .favorite {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+
+/* Filled heart when wishlisted */
+
+.hotelcard-container .btn-wishlist .favorite:not(:empty) {
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.hotelcard-container .btn-wishlist:hover {
+  background: transparent !important;
+
+  transform: scale(1.08);
+}
+
+
+/* Keep default heart gray on hover */
+
+.hotelcard-container .btn-wishlist:hover .favorite {
+  color: #666;
+}
+
+
+/* =========================================
+   DESKTOP GRID
+   EXACTLY 4 CARDS
+========================================= */
+
+.home-container .main {
+  width: calc(100% - 100px);
+  max-width: 1360px;
+
+  margin: 0 auto;
+
+  padding: 16px 0 40px;
+
+  box-sizing: border-box;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  column-gap: 38px;
+  row-gap: 34px;
+
+  align-items: start;
+}
+
+
+/* Force old flex classes off */
+
+.home-container .main.d-flex {
+  display: grid !important;
+}
+
+.home-container .main.wrap {
+  flex-wrap: unset !important;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+  .home-container .main {
+    max-width: 1360px;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    column-gap: 38px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .home-container .main {
+    width: calc(100% - 48px);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 24px;
+    row-gap: 28px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .home-container .main {
+    width: calc(100% - 32px);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 20px;
+    row-gap: 25px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+  .home-container .main {
+    width: calc(100% - 24px);
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .hotelcard-container {
+    height: 390px;
+  }
+
+  .hotelcard-container .img {
+    height: 275px;
+  }
+
+  .hotelcard-details {
+    height: 115px;
+  }
+
+}
+
+.hotelcard-container .btn-wishlist .favorite.wishlisted {
+  color: #ff385c;
+}
+
+.hotelcard-container .btn-wishlist:hover .favorite.wishlisted {
+  color: #ff385c;
+}

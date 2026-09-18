@@ -1,0 +1,1318 @@
+/* =========================================================
+   PAYMENT PAGE
+========================================================= */
+
+.payment-page {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.payment-backdrop {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.58);
+}
+
+
+/* =========================================================
+   PAYMENT MODAL
+========================================================= */
+
+.payment-modal {
+  position: relative;
+  z-index: 1;
+
+  width: 405px;
+  min-width: 405px;
+  max-width: 405px;
+
+  height: 690px;
+  min-height: 690px;
+  max-height: 690px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.payment-header {
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+
+  padding: 0 17px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2e2e2;
+
+  flex-shrink: 0;
+}
+
+.payment-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  height: 100%;
+}
+
+.travel-o-logo-image {
+  width: 31px;
+  height: 31px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.travel-o-text {
+  color: #222222;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.payment-close {
+  width: 28px;
+  height: 28px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #b3b3b3;
+
+  font-size: 27px;
+  font-weight: 300;
+
+  line-height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LANGUAGE BAR
+========================================================= */
+
+.payment-language-bar {
+  width: 100%;
+  height: 46px;
+  min-height: 46px;
+
+  padding: 0 17px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+  flex-shrink: 0;
+}
+
+.payment-back-button {
+  width: 32px;
+  height: 32px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  cursor: pointer;
+}
+
+.language-button {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.language-arrow {
+  margin-left: 3px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   PAYMENT CONTENT
+========================================================= */
+
+.payment-content {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 15px 17px 78px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.payment-content::-webkit-scrollbar,
+.upi-payment-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.payment-content::-webkit-scrollbar-thumb,
+.upi-payment-content::-webkit-scrollbar-thumb {
+  background: #cccccc;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   PAYMENT SECTION
+========================================================= */
+
+.payment-section {
+  width: 100%;
+}
+
+.payment-section h2 {
+  margin: 0 0 8px;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 21px;
+}
+
+.other-payment-section {
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   PAYMENT BOX
+========================================================= */
+
+.payment-method-box {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PAYMENT ROW
+========================================================= */
+
+.payment-row {
+  width: 100%;
+  min-height: 51px;
+
+  margin: 0;
+  padding: 0 13px;
+
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  outline: none;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+}
+
+.payment-row:last-child {
+  border-bottom: none;
+}
+
+.payment-row:hover {
+  background: #fafafa;
+}
+
+.payment-row-large {
+  min-height: 57px;
+}
+
+
+/* =========================================================
+   PAYMENT ICON
+========================================================= */
+
+.payment-icon-image {
+  width: 25px;
+  height: 25px;
+
+  margin: 0;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PAYMENT TEXT
+========================================================= */
+
+.payment-row-title {
+  flex: 1;
+
+  color: #555555;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 19px;
+}
+
+.payment-row-content {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.payment-row-content .payment-row-title {
+  flex: none;
+}
+
+.payment-row-subtitle {
+  color: #888888;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 13px;
+}
+
+.payment-chevron {
+  flex-shrink: 0;
+
+  color: #4d7db7;
+
+  font-size: 24px;
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   UPI PAYMENT CONTENT
+========================================================= */
+
+.upi-payment-content {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 15px 17px 78px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   UPI SECTION
+========================================================= */
+
+.upi-section {
+  width: 100%;
+}
+
+.upi-section h2 {
+  margin: 0 0 8px;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 21px;
+}
+
+
+/* =========================================================
+   QR BOX
+========================================================= */
+
+.qr-payment-box {
+  width: 100%;
+  height: 176px;
+  min-height: 176px;
+
+  margin: 0;
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8d8d8;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   QR WRAPPER
+========================================================= */
+
+.qr-wrapper {
+  width: 142px;
+  height: 142px;
+
+  min-width: 142px;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   QR CODE
+========================================================= */
+
+.qr-code {
+  position: relative;
+
+  width: 125px;
+  height: 125px;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+
+  background: #ffffff;
+
+  border: 1px solid #9db7d4;
+
+  overflow: hidden;
+}
+
+.qr-dark {
+  background: #666666;
+}
+
+.qr-light {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SHOW QR
+========================================================= */
+
+.qr-show-button {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 82px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: #5b91e8;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   QR INFORMATION
+========================================================= */
+
+.qr-information {
+  flex: 1;
+
+  min-width: 0;
+
+  padding-left: 5px;
+
+  box-sizing: border-box;
+}
+
+.qr-information p {
+  margin: 0 0 12px;
+
+  color: #333333;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 17px;
+}
+
+
+/* =========================================================
+   UPI APP ICONS
+========================================================= */
+
+.upi-app-icons {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.upi-app-icons img {
+  width: 21px;
+  height: 21px;
+
+  margin: 0;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.paytm-text {
+  color: #1675b8;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   UPI ID SECTION
+========================================================= */
+
+.upi-id-section {
+  margin-top: 17px;
+}
+
+
+/* =========================================================
+   UPI ID BOX
+========================================================= */
+
+.upi-id-box {
+  width: 100%;
+
+  min-height: 145px;
+
+  margin: 0;
+  padding: 11px 13px;
+
+  box-sizing: border-box;
+
+  border: 2px solid #9bb6d5;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   UPI ID HEADER
+========================================================= */
+
+.upi-id-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   UPI ID ICON
+========================================================= */
+
+.upi-id-logo {
+  position: relative;
+
+  width: 28px;
+  height: 28px;
+
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.upi-id-arrow {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border-top: 2px solid #5d91c7;
+  border-right: 2px solid #5d91c7;
+
+  transform: rotate(45deg);
+}
+
+.upi-id-arrow::before {
+  content: "";
+
+  position: absolute;
+
+  width: 15px;
+  height: 2px;
+
+  left: -9px;
+  top: 7px;
+
+  background: #5d91c7;
+
+  transform: rotate(-45deg);
+}
+
+.upi-id-arrow::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  left: -5px;
+  top: 2px;
+
+  border-top: 2px solid #5d91c7;
+  border-right: 2px solid #5d91c7;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   UPI ID TEXT
+========================================================= */
+
+.upi-id-text {
+  margin-left: 7px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.upi-main-title {
+  color: #444444;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 18px;
+}
+
+.upi-subtitle {
+  margin-top: 2px;
+
+  color: #777777;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 15px;
+}
+
+
+/* =========================================================
+   CHECK
+========================================================= */
+
+.upi-check {
+  width: 21px;
+  height: 21px;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #5b91e8;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   UPI INPUT
+========================================================= */
+
+.upi-input-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 12px;
+}
+
+.upi-input-wrapper label {
+  position: absolute;
+
+  left: 10px;
+  top: -7px;
+
+  padding: 0 5px;
+
+  background: #ffffff;
+
+  color: #6b91bd;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 14px;
+
+  z-index: 2;
+}
+
+.upi-input-wrapper input {
+  width: 100%;
+  height: 44px;
+
+  margin: 0;
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border: 2px solid #9bb6d5;
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #333333;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.upi-input-wrapper input:focus {
+  border-color: #6d9bd0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.payment-footer {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  padding: 9px 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 -7px 16px rgba(0, 0, 0, 0.10);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+.payment-amount {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  flex-shrink: 0;
+}
+
+.payment-amount strong {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 20px;
+}
+
+.view-details-button {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 14px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   PAY NOW
+========================================================= */
+
+.pay-now-button {
+  width: 210px;
+  height: 48px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 4px;
+
+  outline: none;
+
+  background: #d3d3d3;
+
+  color: #777777;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: not-allowed;
+
+  flex-shrink: 0;
+}
+
+.pay-now-button:disabled {
+  background: #d3d3d3;
+  color: #777777;
+
+  cursor: not-allowed;
+}
+
+.pay-now-button:not(:disabled) {
+  background: #5b91e8;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pay-now-button:not(:disabled):hover {
+  background: #4b80d5;
+}
+
+
+/* =========================================================
+   UPI PAY BUTTON
+========================================================= */
+
+.upi-pay-button {
+  background: #d3d3d3 !important;
+
+  color: #777777 !important;
+
+  cursor: not-allowed !important;
+}
+
+.upi-pay-button.upi-pay-enabled {
+  background: #5b91e8 !important;
+
+  color: #ffffff !important;
+
+  cursor: pointer !important;
+}
+
+.upi-pay-button.upi-pay-enabled:hover {
+  background: #4b80d5 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .payment-modal {
+    width: calc(100% - 24px);
+    min-width: 0;
+    max-width: calc(100% - 24px);
+
+    height: calc(100% - 24px);
+    min-height: 0;
+    max-height: calc(100% - 24px);
+  }
+
+  .payment-header {
+    height: 55px;
+    min-height: 55px;
+
+    padding: 0 14px;
+  }
+
+  .travel-o-logo-image {
+    width: 29px;
+    height: 29px;
+  }
+
+  .travel-o-text {
+    font-size: 19px;
+  }
+
+  .payment-language-bar {
+    height: 43px;
+    min-height: 43px;
+
+    padding: 0 14px;
+  }
+
+  .payment-content,
+  .upi-payment-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .qr-payment-box {
+    height: 165px;
+    min-height: 165px;
+  }
+
+  .qr-wrapper {
+    width: 125px;
+    min-width: 125px;
+  }
+
+  .qr-code {
+    width: 112px;
+    height: 112px;
+  }
+
+  .qr-show-button {
+    width: 75px;
+    height: 34px;
+
+    font-size: 12px;
+  }
+
+  .qr-information p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .upi-id-box {
+    padding: 10px;
+  }
+
+  .payment-footer {
+    height: 65px;
+
+    padding: 8px 12px;
+  }
+
+  .payment-amount strong {
+    font-size: 16px;
+  }
+
+  .pay-now-button {
+    width: 175px;
+    height: 45px;
+
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* =========================================================
+   PAYMENT PROCESSING OVERLAY
+========================================================= */
+
+.processing-layer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.32);
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   PROCESSING WHITE PANEL
+========================================================= */
+
+.processing-panel {
+  width: 100%;
+
+  height: 235px;
+
+  padding: 38px 20px 24px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  box-shadow:
+    0 -4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PROCESSING MESSAGE
+========================================================= */
+
+.processing-message {
+  width: 100%;
+
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 23px;
+
+  text-align: center;
+
+  max-width: 430px;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.processing-spinner {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+
+  margin-top: 25px;
+
+  border-radius: 50%;
+
+  border: 4px solid #e6edf8;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.processing-spinner::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 6px;
+
+  border-radius: 50%;
+
+  border: 3px solid #7194c4;
+
+  border-right-color: transparent;
+
+  border-bottom-color: transparent;
+
+  animation: paymentSpinner 1s linear infinite;
+}
+
+.spinner-inner {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  border: 2px solid #7194c4;
+
+  box-sizing: border-box;
+}
+
+@keyframes paymentSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   CANCEL PAYMENT
+========================================================= */
+
+.cancel-payment-button {
+  margin-top: 22px;
+
+  padding: 0 0 3px;
+
+  border: none;
+
+  border-bottom: 1px solid #555555;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #444444;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  line-height: 20px;
+
+  cursor: pointer;
+}
+
+.cancel-payment-button:hover {
+  color: #222222;
+}
+
+
+/* =========================================================
+   DISABLED CLOSE/BACK
+========================================================= */
+
+.payment-close:disabled,
+.payment-back-button:disabled {
+  opacity: 0.45;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   MOBILE PROCESSING
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .processing-panel {
+    height: 205px;
+
+    padding: 30px 15px 20px;
+  }
+
+  .processing-message {
+    font-size: 15px;
+
+    line-height: 21px;
+  }
+
+  .processing-spinner {
+    width: 52px;
+    height: 52px;
+
+    margin-top: 20px;
+  }
+
+  .spinner-inner {
+    width: 31px;
+    height: 31px;
+  }
+
+  .cancel-payment-button {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,372 @@
+/* =========================================
+   BACKDROP
+========================================= */
+
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 90;
+}
+
+
+/* =========================================
+   SEARCH PANEL
+========================================= */
+
+.search-panel {
+  position: fixed;
+
+  top: 76px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: min(1100px, calc(100% - 40px));
+  height: 90px;
+
+  display: flex;
+  align-items: stretch;
+
+  background: #fff;
+
+  border-radius: 4px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  z-index: 100;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SEARCH FIELDS
+========================================= */
+
+.search-panel-field {
+  position: relative;
+
+  flex: 1 1 0;
+
+  min-width: 0;
+
+  padding: 12px 14px;
+
+  background: #fff;
+
+  border-right: 1px solid #ddd;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   FIELD LABEL
+========================================= */
+
+.search-panel-field label {
+  display: block;
+
+  margin: 0 0 8px 0;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 20px;
+
+  color: #333;
+}
+
+
+/* =========================================
+   FIELD INPUT
+========================================= */
+
+.search-panel-field input {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  line-height: 20px;
+
+  color: #555;
+
+  box-sizing: border-box;
+}
+
+
+.search-panel-field input::placeholder {
+  color: #777;
+}
+
+
+/* =========================================
+   WHERE FIELD
+========================================= */
+
+.where-field {
+  z-index: 110;
+}
+
+
+/* =========================================
+   DESTINATION SUGGESTIONS
+========================================= */
+
+.place-suggestions {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+
+  max-height: 520px;
+
+  overflow-y: auto;
+
+  background: #fff;
+
+  border-radius: 0 0 4px 4px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  z-index: 200;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   DESTINATION OPTION
+========================================= */
+
+.place-option {
+  width: 100%;
+
+  padding: 14px 14px;
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+  color: #555;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.place-option:hover {
+  background: #f5f5f5;
+}
+
+
+/* =========================================
+   DATE PLACEHOLDER
+========================================= */
+
+.date-placeholder {
+  position: absolute;
+
+  left: 14px;
+  bottom: 12px;
+
+  font-size: 15px;
+
+  line-height: 20px;
+
+  color: #777;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.search-panel-button {
+  /* IMPORTANT */
+  display: flex !important;
+
+  position: relative;
+
+  flex: 0 0 145px;
+
+  width: 145px;
+  min-width: 145px;
+  max-width: 145px;
+
+  height: 90px;
+
+  margin: 0;
+  padding: 0 16px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: none;
+
+  border-radius: 0 4px 4px 0;
+
+  background: #ff5a1f;
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  z-index: 120;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-panel-button .material-icons-outlined {
+  display: inline-flex;
+
+  width: 22px;
+  height: 22px;
+
+  margin: 0;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  line-height: 22px;
+
+  color: #fff;
+
+  flex: 0 0 22px;
+}
+
+
+/* =========================================
+   SEARCH BUTTON TEXT
+========================================= */
+
+.search-panel-button {
+  text-decoration: none;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.search-panel-button:hover {
+  background: #f4511e;
+}
+
+
+/* =========================================
+   BUTTON ACTIVE
+========================================= */
+
+.search-panel-button:active {
+  background: #e94d1b;
+}
+
+
+/* =========================================
+   REMOVE DEFAULT BUTTON EFFECTS
+========================================= */
+
+.search-panel-button:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .search-panel {
+    top: 65px;
+
+    width: calc(100% - 20px);
+
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .search-panel-field {
+    width: 100%;
+
+    min-height: 70px;
+
+    flex: none;
+
+    border-right: none;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+
+  .search-panel-button {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    height: 55px;
+
+    flex: none;
+
+    border-radius: 0 0 4px 4px;
+  }
+
+
+  .place-suggestions {
+    max-height: 350px;
+  }
+
+}

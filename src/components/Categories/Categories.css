@@ -1,0 +1,213 @@
+/* =========================================
+   CATEGORIES CONTAINER
+========================================= */
+
+.categories-container {
+  width: 100%;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px 0 65px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+
+  /* IMPORTANT:
+     No margin here.
+     Navbar is not fixed.
+  */
+  margin-top: 0;
+}
+
+
+/* =========================================
+   CATEGORIES LIST
+========================================= */
+
+.categories-list {
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  white-space: nowrap;
+
+  scrollbar-width: none;
+}
+
+.categories-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================
+   CATEGORY BUTTONS
+========================================= */
+
+.category-item {
+  flex-shrink: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #555555;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.category-item:hover {
+  color: #222222;
+}
+
+
+/* =========================================
+   ACTIVE CATEGORY
+========================================= */
+
+.active-category {
+  color: #222222;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   REMOVE FOCUS OUTLINE
+========================================= */
+
+.category-item:focus {
+  outline: none;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.category-actions {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  margin-left: 25px;
+}
+
+
+/* =========================================
+   FILTER BUTTON
+========================================= */
+
+.filter-button {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 24px;
+
+  border: 1px solid #dddddd;
+  border-radius: 28px;
+
+  background-color: #ffffff;
+
+  color: #222222;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+  background-color: #f7f7f7;
+}
+
+.filter-button svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .categories-container {
+    padding-left: 50px;
+    padding-right: 25px;
+  }
+
+  .categories-list {
+    gap: 30px;
+  }
+
+  .category-actions {
+    margin-left: 20px;
+  }
+
+  .filter-button {
+    padding: 0 20px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .categories-container {
+    height: 62px;
+
+    padding: 0 20px;
+  }
+
+  .categories-list {
+    gap: 25px;
+  }
+
+  .category-item {
+    font-size: 14px;
+  }
+
+  .filter-button {
+    height: 46px;
+
+    padding: 0 16px;
+  }
+}

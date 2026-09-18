@@ -1,0 +1,152 @@
+.booking-success-page {
+  width: 100%;
+
+  min-height: calc(100vh - 100px);
+
+  background: #ffffff;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.success-content {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding-top: 125px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  background: #ff6b4a;
+
+  border: 5px solid #000000;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.success-icon span {
+  color: #ffd34d;
+
+  font-size: 65px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   SUCCESS TEXT
+========================================================= */
+
+.success-content h1 {
+  margin: 28px 0 52px;
+
+  color: #111111;
+
+  font-size: 43px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CONTINUE BUTTON
+========================================================= */
+
+.continue-booking-button {
+  width: 255px;
+
+  height: 52px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #ff5722;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.continue-booking-button:hover {
+  background: #e64a19;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .success-content {
+    padding: 100px 20px 40px;
+  }
+
+  .success-icon {
+    width: 85px;
+    height: 85px;
+  }
+
+  .success-icon span {
+    font-size: 52px;
+  }
+
+  .success-content h1 {
+    margin: 25px 0 40px;
+
+    font-size: 30px;
+  }
+
+  .continue-booking-button {
+    width: 220px;
+
+    height: 48px;
+
+    font-size: 17px;
+  }
+}
